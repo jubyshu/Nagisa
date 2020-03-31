@@ -1,0 +1,91 @@
+# Basic
+title: Nagisa
+author: Juby
+url: https://jubyshu.github.io
+timezone: Asia/Shanghai
+
+# SEO
+keywords: [Nagisa, Jekyll]
+description: Life is so beautiful.
+
+# Social
+social:
+  twitter: jubyshu
+  weibo: manatsuakimoto
+  youtube: UCg-mkLHhCiWZfc2TLlBuR8A
+
+# Google
+google: 
+  analytics: 
+  site_verification: 
+
+# Disqus
+disqus_js: https://nagisa-1.disqus.com/embed.js
+
+# OpenGraph & TwitterCard
+card: /images/tcard.png
+
+# ----------------------------------------------
+# 
+#    Jekyll Docs: https://jekyllrb.com/docs/
+#
+# ----------------------------------------------
+
+# Permalink
+permalink: '/:year/:month/:title/'
+
+# Format
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Navigation buttons
+nav:
+  - {title: Home, description: blog, url: '/'}
+  - {title: Archive, description: archive, url: '/archive/'}   
+  - {title: Book, description: read, url: '/book/'}
+  - {title: Guest, description: guestbook, url: '/guestbook/'}      
+  - {title: About, description: about, url: '/about/'}         
+
+# Categories
+categs:
+  - {title: Journal, url: '/journal/'}
+  - {title: Essay, url: '/essay/'}
+
+# Plugins
+plugins: [jekyll-paginate-v2, jekyll-sitemap]
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 9
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# autopage_tags
+autopages:
+  enabled: true
+  categories: 
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    layouts: 
+      - 'autopage_tags.html'
+    title: 'Tags - :tag'
+    permalink: '/tags/:tag'
+
+# Increase jekyll build speed
+exclude: [Gemfile, Gemfile.lock, README.md]
+keep_files: [images]
+incrumental: true
